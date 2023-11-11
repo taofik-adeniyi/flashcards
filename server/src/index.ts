@@ -29,7 +29,7 @@ app.get("/hello", (req: Request, res: Response) => {
   res.status(200).json({ mssg: "Hello Wold!" });
 });
 
-mongoose.connect(process.env.DB_URI!).then(() => {
+mongoose.connect(process.env.MONGO_URI!).then(() => {
   console.log(`listening on port: ${PORT}`);
   app.listen(PORT);
 });
